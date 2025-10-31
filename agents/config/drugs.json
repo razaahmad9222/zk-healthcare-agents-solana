@@ -1,0 +1,10 @@
+{
+  "DRUG001": {
+    "interactions": ["DRUG002"],
+    "contraindications": ["ALLERGY_A"]
+  },
+  "DRUG002": {
+    "interactions": ["DRUG001"],
+    "contraindications": []
+  }
+}
