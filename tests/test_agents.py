@@ -1,8 +1,8 @@
 import pytest
 import asyncio
 import sys
-sys.path.append('../agents')  # Adjust path
-from main import PatientData, EligibilityAgent, PrescriptionAgent, FederatedLearningCoordinator, DiagnosisModel, Fernet, hashlib
+# sys.path.append('../agents')  # Removed; use package imports instead
+from agents.main import PatientData, EligibilityAgent, PrescriptionAgent, FederatedLearningCoordinator, DiagnosisModel, Fernet, hashlib
 
 @pytest.fixture
 def solana_endpoint():
