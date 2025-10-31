@@ -1,0 +1,21 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [0.2.0] - 2025-10-31
+### Added
+- Cargo.toml and Anchor.toml for Solana program dependencies and configuration.
+- requirements.txt for Python package management.
+- __init__.py files for agents and tests directories.
+- .gitignore for build artifact exclusion.
+- Makefile for streamlined deployment.
+- .env.example for configuration variables.
+
+### Fixed
+- Duplicate LICENSE file removal.
+- Test import paths for package compatibility.
+- Added circuits/eligibility.circom for ZK proofs.
+
+## [0.1.0] - 2025-10-31
+### Added
+- Initial prototype: Solana smart contract, Python agents, ZK circuit, and tests.
