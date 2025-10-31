@@ -1,4 +1,4 @@
-pragma circom 2.0.0;
+pragma circom 2.0.0.0;
 
 // Patient eligibility verification circuit
 template PatientEligibility() {
