@@ -1,0 +1,29 @@
+# Contributing Guidelines
+
+Thank you for considering contributions to zk-healthcare-agents-solana. We welcome improvements in privacy, scalability, and Solana integration.
+
+## Getting Started
+1. Fork the repository.
+2. Clone your fork: `git clone <your-fork-url>`.
+3. Install dependencies: `make build` (requires Anchor, Circom).
+4. Create a feature branch: `git checkout -b feature/zk-enhancement`.
+
+## Development Workflow
+- Run tests: `make test`.
+- Compile ZK: `cd circuits && ./compile.sh`.
+- Deploy: `make deploy`.
+- Commit with conventional messages (e.g., "feat: add Groth16 verifier").
+
+## ZK-Specific Guidelines
+- Use Circom 2.0 for circuits; test with snarkjs.
+- Ensure proofs verify on-chain (<450K CU).
+
+## Code Standards
+- Rust: Clippy-compliant.
+- Python: PEP 8; type hints preferred.
+
+## Submitting Pull Requests
+- Reference issues: "Fixes #1".
+- Include tests and benchmarks.
+
+We review PRs within 48 hours. Questions? Open a discussion.
