@@ -1,0 +1,26 @@
+[package]
+name = "zk_healthcare"
+version = "0.1.0"
+description = "Solana program for privacy-preserving healthcare agents"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "zk_healthcare"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.30.0"
+anchor-spl = "0.30.0"
+solana-program = "1.18.0"
+ark-groth16 = "0.5.0"
+ark-bn254 = "0.4.0"
+ark-serialize = "0.4.0"
+ark-std = "0.4.0"
+keccak-hash = "0.10.0"
