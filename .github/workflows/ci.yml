@@ -1,0 +1,29 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - name: Install Anchor
+        run: |
+          cargo install --git https://github.com/coral-xyz/anchor anchor-cli --locked
+      - name: Test Python
+        run: |
+          pip install -r agents/requirements.txt
+          pytest tests/ -v
+      - name: Build Anchor
+        run: |
+          cd programs/zk_healthcare
+          anchor build
+      - name: Compile ZK Circuit
+        run: |
+          cd circuits
+          chmod +x compile.sh
+          ./compile.sh
