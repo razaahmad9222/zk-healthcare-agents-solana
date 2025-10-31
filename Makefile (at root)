@@ -1,0 +1,14 @@
+.PHONY: build deploy test clean
+
+build:
+	cd programs/zk_healthcare && anchor build
+
+deploy:
+	cd programs/zk_healthcare && anchor deploy --provider.cluster devnet
+
+test:
+	pytest tests/
+
+clean:
+	cd programs/zk_healthcare && anchor clean
+	rm -rf agents/__pycache__
